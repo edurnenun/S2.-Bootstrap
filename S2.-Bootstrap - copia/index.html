@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+   -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <title>S2. Bootstrap</title>
+</head>
+
+<body>
+    <header>
+        <!--navbar + logo i uns enllaços per a fer login/registre.-->
+        <!-- navbar estigui en versió botó hamburguesa, les opcions de login/registre han de quedar visibles i independents-->
+        <!-- Al clicar sobre login i registre, s’ha d’obrir una finestra modal per accedir-hi. Evidentment han de tenir diferents dade-->
+
+        <nav class="navbar navbar-light bg-light navbar-expand-lg navbar-expand-md fixed-top" style="height: 60px;">
+
+            <a href="#" class="navbar-brand">
+                <img src="img/nav_logo.jpg" alt="logo" style="width: 40px;">
+
+                <!--logo brand-->
+            </a>
+            <a class="nav-link" href="#">Yutaka Iwata</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse"> <!--navbar con icono hambuerguesa-->
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Guitars</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Repairs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Luthiers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!--login/registre -->
+            <button type="button" class="btn btn-bd-primary" data-toggle="modal" data-target="#login">login/logup</button>
+
+            <!-- Modal-->
+            <div class="model fade" id="login">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Identifícate o regístrate</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            <form action="/action_page.php">
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                                </div>
+                                <div>
+                                    <label for="pwd">Password:</label>
+                                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password">
+                                </div>
+                                <div>
+                                    <label for="form-check-label">
+                          <input type="form-check-input" type="checkbox" name="remember">Remember me
+                        </label>
+                                </div>
+                                <button type="submit" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- End modal-->
+
+        </nav>
+    </header>
+    <main>
+        <!-- Slider mínim 4 imatges-->
+
+        <!-- grid system de bootstrap per a fer que la teva web sigui responsive-->
+        <!-- MOSTRA PARA GRID http://preview.themeforest.net/item/book-store-library-online-book-store/full_screen_preview/21369136?ref=Digital_Square&clickthrough_id=1420858803&redirect_back=true-->
+
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+                <li data-target="#demo" data-slide-to="3"></li>
+                <li data-target="#demo" data-slide-to="4"></li>
+            </ul>
+
+            <!-- The slideshow = carousel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/guitar-2301723_1280.jpg" alt="Guitar on the wall" width="1280" height="700">
+                    <div class="carousel-caption">
+                        <h3>Yutaka Iwata</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <a href="#" class="btn btn-bd-primary">See more</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/man-938534_1280.jpg" alt="Man playing guitar" width="1280" height="700">
+                    <div class="carousel-caption">
+                        <h3>Guitars</h3>
+                        <p class="text-dark"></p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <a href="#" class="btn btn-secondary">See more</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/ukulele-4301178_1280.jpg" alt="Ukulele" width="1280" height="700">
+                    <div class="carousel-caption">
+                        <h3>Ukulele</h3>
+                        <p class="text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <a href="#" class="btn btn-success">See more</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/guitar-4250161_1280.jpg" alt="Luthiers" width="1280" height="700">
+                    <div class="carousel-caption">
+                        <h3>Luthiers</h3>
+                        <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <a href="#" class="btn btn-info">See more</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/guitar-2409033_1280.jpg" alt="Guitard mouth" width="1280" height="700">
+                    <div class="carousel-caption">
+                        <h3>Contact us</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <a href="#" class="btn btn-warning">See more</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+
+        <!-- End silder = carousel-->
+
+
+        <!--Cards -->
+
+        <div class="container-fluid" id="Card">
+            <div class="card-columns">
+
+                <div class="card img-fluid" style="width:500px">
+                    <!--background image-->
+                    <img class="card-img-top" src="img/luthier-5132460_1280.jpg" alt="Card image" style="width: 100%;">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <a href="#" class="btn btn-danger">See more</a>
+                    </div>
+                </div>
+
+                <div class="card img-fluid" style="width:500px">
+                    <!--background image-->
+                    <img class="card-img-top" src="img/luthier-5132460_1280.jpg" alt="Card image" style="width: 100%;">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text text-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <a href="#" class="btn btn-dark">See more</a>
+                    </div>
+                </div>
+
+                <div class="card img-fluid" style="width:500px">
+                    <!--background image-->
+                    <img class="card-img-top" src="img/luthier-5132460_1280.jpg" alt="Card image" style="width: 100%;">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text text-success">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <a href="#" class="btn btn-light">See more</a>
+                    </div>
+                </div>
+
+                <div class="card img-fluid" style="width:500px">
+                    <!--background image-->
+                    <img class="card-img-top" src="img/luthier-5132460_1280.jpg" alt="Card image" style="width: 100%;">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text text-info">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <a href="#" class="btn btn-link">See more</a>
+                    </div>
+                </div>
+
+                <div class="card img-fluid" style="width:500px">
+                    <!--background image-->
+                    <img class="card-img-top" src="img/luthier-5132460_1280.jpg" alt="Card image" style="width: 100%;">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text text-warning">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <a href="#" class="btn btn-bd-primary">See more</a>
+                    </div>
+                </div>
+
+                <div class="card img-fluid" style="width:500px">
+                    <!--background image-->
+                    <img class="card-img-top" src="img/luthier-5132460_1280.jpg" alt="Card image" style="width: 100%;">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text text-danger">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <a href="#" class="btn btn-bd-primary">See more</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- end cards-->
+    </main>
+    <footer>
+        <div class="container" id="FooterContent">
+            <div class="row">
+                <div class="col-sm-3 list-group">
+                    <h4>Yutaka Iwata</h4>
+
+
+                </div>
+                <div class="col-sm-3 list-group">
+                    <h4>Contact Info</h4>
+                    <p class="text-secondary">C/ Mare de Deu de Port 252, Local 13 bajos, Barcelona, CP 08038 +34 931637316 +34 644070580 yutakaiwata@outlook.es
+                    </p>
+                    <p>Media</p>
+
+
+                </div>
+                <div class="col-sm-3 list-group">
+                    <h4>Web Map</h4>
+                    <a href="#">Home</a>
+                    <a href="#">Guitars</a>
+                    <a href="#">Repairs</a>
+                    <a href="#">Luthiers</a>
+                    <a href="#">Contact</a>
+
+                </div>
+                <div class="col-sm-3 list-group">
+                    <h4>Delivery</h4>
+                    <a href="#">Link</a>
+                    <a href="#">Link</a>
+                    <a href="#">Link</a>
+                    <a href="#">Link</a>
+                    <a href="#">Link</a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!--      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+-->
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
+
+
+<!--
+    Nivell 1
+- Exercici 1
+Partint del concepte mobile first, crea el disseny de la teva web. Aquest projecte ha de tenir, mínimament:
+
+Bootstrap des de CDN i des d’arxius descarregats. La versió que no s’utilitzi ha d’estar comentada .
+La capçalera ha de tenir un navbar + logo i uns enllaços per a fer login/registre. Quan el navbar estigui en versió botó hamburguesa, les opcions de login/registre han de quedar visibles i independents.
+Al clicar sobre login i registre, s’ha d’obrir una finestra modal per accedir-hi. Evidentment han de tenir diferents dades.
+La pàgina Home Page ha de tenir un slider de mínim 4 imatges.
+Usar el grid system de bootstrap per a fer que la teva web sigui responsive.
+-->
